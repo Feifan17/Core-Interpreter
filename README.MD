@@ -1,6 +1,7 @@
-#Core Interpreter
+# Core Interpreter
 
-##Core Grammar
+## Core Grammar
+
 	<prog>		::= program <decl seq> begin <stmt seq> end 
 	<decl seq>	::= <decl> | <decl> <decl seq>          
 	<stmt seq>	::= <stmt> | <stmt> <stmt seq>
@@ -24,7 +25,7 @@
 	<digit>		::=	0 | 1 | 2 | 3 | ... | 9 
 
 
-##Interpreter Design
+## Interpreter Design
 The overall design of the interpreter is based on the object-oriented approach, where each of the following classes is corresponding to a non-terminal node in the Core language grammar.
 
 	Prog class      -> <prog>
@@ -67,7 +68,7 @@ The run-time errors are caught during the execution time:
 - trying to read a value from an empty input stream.
 
 
-##Compilation & Running the Project
+## Compilation & Running the Project
 1. Navigate to the project folder, compile with the terminal command: `make`
 
 2. In the same folder, execute the command: 
@@ -80,7 +81,7 @@ The run-time errors are caught during the execution time:
 
 3. run `make clean` and `make` to rebuild the project.
 
-##User Mannual
+## User Mannual
 use the Interpreter class with the following steps:
 
 1. create a new interpreter object in your main function using: `Interpreter interpreter = new Interpreter(Tokenizer tokenizer)`;
@@ -89,7 +90,7 @@ use the Interpreter class with the following steps:
 4. call the `readData(ArrayList<Integer> data)` method on the interpreter to read in data for the program.
 5. call the `execute()` method on the interpreter to execute the program.
 
-##Test Cases
+## Test Cases
 "tests" folder contains 10 test cases: Each within its own subfolder.
 
 - The first 3 test cases are provided by the instructor.
@@ -105,7 +106,7 @@ All the test cases produced the expected results.
 
 
 
-##Author
+## Author
 Feifan Lin
 
 
